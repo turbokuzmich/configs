@@ -62,17 +62,17 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'chr4/nginx.vim'
 
 Plugin 'jeetsukumaran/vim-indentwise'
-" Plugin 'matze/vim-move'
 Plugin 'tpope/vim-surround'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-commentary'
 Plugin 'scrooloose/nerdtree'
-Plugin 'wincent/Command-T'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'godlygeek/tabular'
 Plugin 'unblevable/quick-scope'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'dkprice/vim-easygrep'
+Plugin 'tpope/vim-repeat'
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -95,9 +95,6 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 
 let g:mta_use_matchparen_group                  = 1
 
-let g:move_map_keys                             = 0
-let g:move_key_modifier                         = 'M'
-
 let g:NERDTreeWinSize                           = 40
 let g:NERDTreeShowLineNumbers                   = 1
 
@@ -117,9 +114,17 @@ let g:javascript_conceal_arrow_function         = "⇒"
 
 let g:user_emmet_leader_key                     = '<c-z>'
 
+let g:ctrlp_map = '<leader>y'
+
 nmap ,n :NERDTreeFind<CR>
 nmap ,m :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
 filetype plugin indent on
 colorscheme badwolf
 set guifont=Meslo\ LG\ S\ for\ Powerline:h11
