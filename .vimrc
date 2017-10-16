@@ -1,5 +1,6 @@
 set nocompatible
 set relativenumber
+set number
 set nowrap
 set autoread
 set tabstop=4
