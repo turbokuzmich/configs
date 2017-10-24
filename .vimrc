@@ -72,8 +72,8 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'godlygeek/tabular'
 Plugin 'unblevable/quick-scope'
 Plugin 'AndrewRadev/splitjoin.vim'
-Plugin 'dkprice/vim-easygrep'
 Plugin 'tpope/vim-repeat'
+Plugin 'dkprice/vim-easygrep'
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -117,16 +117,22 @@ let g:user_emmet_leader_key                     = '<c-z>'
 
 let g:ctrlp_map = '<leader>y'
 
+let g:EasyGrepCommand = 1
+set grepprg=git\ grep\ -n
+
 nmap ,n :NERDTreeFind<CR>
 nmap ,m :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
+
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 nnoremap <C-j> :m .+1<CR>==
 nnoremap <C-k> :m .-2<CR>==
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
+
 filetype plugin indent on
+
 colorscheme badwolf
 set guifont=Meslo\ LG\ S\ for\ Powerline:h11
 highlight Conceal guifg=#f8f6f2 guibg=#1C1B1A cterm=NONE ctermbg=NONE ctermfg=white
