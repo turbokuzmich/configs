@@ -131,6 +131,8 @@ nnoremap <C-k> :m .-2<CR>==
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
+autocmd BufNewFile,BufReadPost *.styl set filetype=stylus
+
 filetype plugin indent on
 
 colorscheme badwolf
