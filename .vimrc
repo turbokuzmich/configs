@@ -8,6 +8,7 @@ set shiftwidth=4
 set expandtab
 set cursorline
 set foldmethod=syntax
+set foldlevel=99
 set background=dark
 set hls
 set encoding=utf-8
