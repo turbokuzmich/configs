@@ -115,7 +115,7 @@ let g:javascript_conceal_arrow_function         = "⇒"
 
 let g:user_emmet_leader_key                     = '<c-z>'
 
-let g:ctrlp_map = '<leader>y'
+let g:ctrlp_map = '<leader>t'
 
 let g:EasyGrepCommand = 1
 set grepprg=git\ grep\ -n
