@@ -117,9 +117,11 @@ let g:javascript_conceal_arrow_function         = "⇒"
 let g:user_emmet_leader_key                     = '<c-z>'
 
 let g:ctrlp_map = '<leader>t'
+let g:ctrlp_custom_ignore = 'node_modules'
 
 let g:EasyGrepCommand = 1
 set grepprg=git\ grep\ -n
+
 
 nmap ,n :NERDTreeFind<CR>
 nmap ,m :NERDTreeToggle<CR>
