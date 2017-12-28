@@ -90,6 +90,7 @@ Plugin 'majutsushi/tagbar'
 call vundle#end()
 
 let g:javascript_plugin_jsdoc                   = 1
+let g:javascript_plugin_flow                    = 1
 
 let g:airline_powerline_fonts                   = 1
 let g:airline#extensions#tabline#enabled        = 1
