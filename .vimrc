@@ -35,6 +35,8 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'w0rp/ale'
+
 Plugin 'pangloss/vim-javascript'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'elzr/vim-json'
@@ -118,7 +120,7 @@ let g:javascript_conceal_arrow_function         = "⇒"
 let g:user_emmet_leader_key                     = '<c-z>'
 
 let g:ctrlp_map = '<leader>t'
-let g:ctrlp_custom_ignore = 'node_modules'
+let g:ctrlp_custom_ignore = 'node_modules|build'
 
 let g:EasyGrepCommand = 1
 set grepprg=git\ grep\ -n
@@ -138,6 +140,11 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 autocmd BufNewFile,BufReadPost *.styl set filetype=stylus
 
 filetype plugin indent on
+
+let g:ale_fixers = {
+\    'javascript': ['prettier']
+\}
+let g:ale_fix_on_save = 1
 
 colorscheme badwolf
 set guifont=Meslo\ LG\ S\ for\ Powerline:h11
