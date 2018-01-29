@@ -65,6 +65,8 @@ Plugin 'tpope/vim-fugitive'
 
 Plugin 'chr4/nginx.vim'
 
+Plugin 'jvirtanen/vim-cocoapods'
+
 Plugin 'jeetsukumaran/vim-indentwise'
 Plugin 'tpope/vim-surround'
 Plugin 'jiangmiao/auto-pairs'
@@ -144,7 +146,6 @@ filetype plugin indent on
 let g:ale_fixers = {
 \    'javascript': ['prettier']
 \}
-
 nmap <leader>f :ALEFix<CR>
 
 colorscheme badwolf
