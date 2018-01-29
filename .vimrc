@@ -144,7 +144,8 @@ filetype plugin indent on
 let g:ale_fixers = {
 \    'javascript': ['prettier']
 \}
-let g:ale_fix_on_save = 1
+
+nmap <leader>f :ALEFix<CR>
 
 colorscheme badwolf
 set guifont=Meslo\ LG\ S\ for\ Powerline:h11
