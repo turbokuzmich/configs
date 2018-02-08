@@ -15,6 +15,7 @@ set encoding=utf-8
 set hidden
 set path+=**
 set wildmenu
+set wildignore+=*node_modules*,*build*
 set shell=zsh\ -l
 set conceallevel=1
 set ttyfast
@@ -122,7 +123,7 @@ let g:javascript_conceal_arrow_function         = "⇒"
 let g:user_emmet_leader_key                     = '<c-z>'
 
 let g:ctrlp_map = '<leader>t'
-let g:ctrlp_custom_ignore = 'node_modules|build'
+let g:ctrlp_custom_ignore = '(node_modules|build)'
 
 let g:EasyGrepCommand = 1
 set grepprg=git\ grep\ -n
