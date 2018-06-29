@@ -59,6 +59,13 @@ Plugin 'jwalton512/vim-blade'
 
 Plugin 'wavded/vim-stylus'
 
+Plugin 'cakebaker/scss-syntax.vim'
+
+Plugin 'klen/python-mode'
+Plugin 'mitsuhiko/vim-python-combined'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'plytophogy/vim-virtualenv'
+
 Plugin 'tikhomirov/vim-glsl'
 Plugin 'beyondmarc/opengl.vim'
 
@@ -128,6 +135,8 @@ let g:ctrlp_custom_ignore = '(node_modules|build)'
 let g:EasyGrepCommand = 1
 set grepprg=git\ grep\ -n
 
+let python_highlight_all = 1
+" let g:ycm_python_binary_path = '/Users/turbokuzmich/.virtualenvs/statbox/bin/python'
 
 nmap ,n :NERDTreeFind<CR>
 nmap ,m :NERDTreeToggle<CR>
@@ -141,6 +150,10 @@ vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
 autocmd BufNewFile,BufReadPost *.styl set filetype=stylus
+autocmd BufRead,BufNewFile *.css,*.scss,*.less setlocal foldmethod=marker foldmarker={,}
+
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 filetype plugin indent on
 
