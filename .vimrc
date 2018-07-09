@@ -165,3 +165,7 @@ nmap <leader>f :ALEFix<CR>
 colorscheme badwolf
 set guifont=Meslo\ LG\ S\ for\ Powerline:h11
 highlight Conceal guifg=#f8f6f2 guibg=#1C1B1A cterm=NONE ctermbg=NONE ctermfg=white
+
+" copy between vims
+ab aW w! /tmp/turbokuzmich.vim.temp.a
+ab aR r /tmp/turbokuzmich.vim.temp.a
