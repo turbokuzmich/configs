@@ -51,6 +51,10 @@ Plugin 'raichoo/purescript-vim'
 
 Plugin 'StanAngeloff/php.vim'
 
+Plugin 'leafgarland/typescript-vim'
+Plugin 'Quramy/vim-js-pretty-template'
+Plugin 'Quramy/tsuquyomi'
+
 Plugin 'keith/swift.vim'
 
 Plugin 'othree/html5.vim'
@@ -91,6 +95,7 @@ Plugin 'dkprice/vim-easygrep'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'sjl/badwolf'
+Plugin 'dracula/vim'
 
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
@@ -136,7 +141,7 @@ let g:EasyGrepCommand = 1
 set grepprg=git\ grep\ -n
 
 let python_highlight_all = 1
-" let g:ycm_python_binary_path = '/Users/turbokuzmich/.virtualenvs/statbox/bin/python'
+let g:ycm_python_binary_path = '/Users/turbokuzmich/.virtualenvs/statbox/bin/python'
 
 nmap ,n :NERDTreeFind<CR>
 nmap ,m :NERDTreeToggle<CR>
@@ -151,20 +156,45 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 
 autocmd BufNewFile,BufReadPost *.styl set filetype=stylus
 autocmd BufRead,BufNewFile *.css,*.scss,*.less setlocal foldmethod=marker foldmarker={,}
+autocmd BufNewFile,BufRead *.ts  set filetype=typescript
+autocmd BufNewFile,BufRead *.tsx setfiletype typescript
 
 let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 filetype plugin indent on
 
 let g:ale_fixers = {
-\    'javascript': ['prettier']
+\    'javascript': ['prettier'],
+\    'typescript': ['prettier']
 \}
 nmap <leader>f :ALEFix<CR>
 
-colorscheme badwolf
+let g:tagbar_type_typescript = {
+  \ 'ctagsbin' : 'tstags',
+  \ 'ctagsargs' : '-f-',
+  \ 'kinds': [
+    \ 'e:enums:0:1',
+    \ 'f:function:0:1',
+    \ 't:typealias:0:1',
+    \ 'M:Module:0:1',
+    \ 'I:import:0:1',
+    \ 'i:interface:0:1',
+    \ 'C:class:0:1',
+    \ 'm:method:0:1',
+    \ 'p:property:0:1',
+    \ 'v:variable:0:1',
+    \ 'c:const:0:1',
+  \ ],
+  \ 'sort' : 0
+\ }
+
+set ballooneval
+autocmd FileType typescript setlocal balloonexpr=tsuquyomi#balloonexpr()
+
+colorscheme dracula
 set guifont=Meslo\ LG\ S\ for\ Powerline:h11
-highlight Conceal guifg=#f8f6f2 guibg=#1C1B1A cterm=NONE ctermbg=NONE ctermfg=white
+highlight Conceal guifg=#f8f6f2 guibg=#282a36 cterm=NONE ctermbg=NONE ctermfg=white
 
 " copy between vims
 ab aW w! /tmp/turbokuzmich.vim.temp.a
