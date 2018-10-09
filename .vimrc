@@ -143,6 +143,9 @@ set grepprg=git\ grep\ -n
 let python_highlight_all = 1
 let g:ycm_python_binary_path = '/Users/turbokuzmich/.virtualenvs/statbox/bin/python'
 
+" fixes vim freezes on save
+let g:tsuquyomi_disable_quickfix = 1
+
 nmap ,n :NERDTreeFind<CR>
 nmap ,m :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR>
