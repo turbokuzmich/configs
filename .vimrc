@@ -104,6 +104,8 @@ Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'majutsushi/tagbar'
 
+Plugin 'editorconfig/editorconfig-vim'
+
 call vundle#end()
 
 let g:javascript_plugin_jsdoc                   = 1
@@ -166,7 +168,8 @@ filetype plugin indent on
 
 let g:ale_fixers = {
 \    'javascript': ['prettier'],
-\    'typescript': ['prettier']
+\    'typescript': ['prettier'],
+\    'json': ['prettier']
 \}
 nmap <leader>f :ALEFix<CR>
 
@@ -192,7 +195,7 @@ let g:tagbar_type_typescript = {
 set ballooneval
 autocmd FileType typescript setlocal balloonexpr=tsuquyomi#balloonexpr()
 
-colorscheme dracula
+colorscheme badwolf
 set guifont=Meslo\ LG\ S\ for\ Powerline:h11
 highlight Conceal guifg=#f8f6f2 guibg=#282a36 cterm=NONE ctermbg=NONE ctermfg=white
 
