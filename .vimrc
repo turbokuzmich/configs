@@ -169,7 +169,8 @@ filetype plugin indent on
 let g:ale_fixers = {
 \    'javascript': ['prettier'],
 \    'typescript': ['prettier'],
-\    'json': ['prettier']
+\    'json': ['prettier'],
+\    'html': ['prettier']
 \}
 nmap <leader>f :ALEFix<CR>
 
