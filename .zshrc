@@ -54,8 +54,6 @@ ZSH_THEME="robbyrussell"
 plugins=(git brew common-aliases jsontools npm osx pod scala web-search)
 
 source $ZSH/oh-my-zsh.sh
-source ~/.zsh/gulp.plugin.zsh/gulp.plugin.zsh
-source ~/.zsh/yarn.plugin.zsh/yarn.plugin.zsh
 
 # User configuration
 
