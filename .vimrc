@@ -170,7 +170,8 @@ let g:ale_fixers = {
 \    'javascript': ['prettier'],
 \    'typescript': ['prettier'],
 \    'json': ['prettier'],
-\    'html': ['prettier']
+\    'html': ['prettier'],
+\    'css': ['prettier']
 \}
 nmap <leader>f :ALEFix<CR>
 
