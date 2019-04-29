@@ -84,6 +84,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-commentary'
 Plugin 'scrooloose/nerdtree'
+Plugin 'vifm/vifm.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'godlygeek/tabular'
@@ -107,6 +108,8 @@ Plugin 'majutsushi/tagbar'
 Plugin 'editorconfig/editorconfig-vim'
 
 call vundle#end()
+
+let loaded_vim = 1
 
 let g:javascript_plugin_jsdoc                   = 1
 let g:javascript_plugin_flow                    = 1
@@ -147,6 +150,7 @@ let g:ycm_python_binary_path = '/Users/turbokuzmich/.virtualenvs/statbox/bin/pyt
 
 nmap ,n :NERDTreeFind<CR>
 nmap ,m :NERDTreeToggle<CR>
+nmap ,, :EditVifm<CR>
 nmap <F8> :TagbarToggle<CR>
 
 nnoremap <C-e> 3<C-e>
@@ -198,7 +202,7 @@ set ballooneval
 autocmd FileType typescript setlocal balloonexpr=tsuquyomi#balloonexpr()
 
 colorscheme badwolf
-set guifont=Meslo\ LG\ S\ for\ Powerline:h11
+set guifont=Meslo\ LG\ S\ for\ Powerline:h13
 highlight Conceal guifg=#f8f6f2 guibg=#282a36 cterm=NONE ctermbg=NONE ctermfg=white
 
 " copy between vims
