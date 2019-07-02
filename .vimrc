@@ -139,6 +139,7 @@ let g:javascript_conceal_arrow_function         = "⇒"
 
 let g:user_emmet_leader_key                     = '<c-z>'
 
+let g:ctrlp_cmd = 'CtrlPBuffer'
 let g:ctrlp_map = '<leader>t'
 let g:ctrlp_custom_ignore = '(node_modules|build)'
 
