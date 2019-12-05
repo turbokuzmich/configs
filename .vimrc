@@ -166,6 +166,17 @@ autocmd BufRead,BufNewFile *.css,*.scss,*.less setlocal foldmethod=marker foldma
 autocmd BufNewFile,BufRead *.ts  set filetype=typescript
 autocmd BufNewFile,BufRead *.tsx setfiletype typescript
 
+function! StylusFold()
+    setl foldmethod=indent
+    setl foldlevelstart=1
+    setl foldnestmax=2
+    setl sw=2
+    setl ts=2
+    setl fen
+endfunction
+
+au FileType stylus call StylusFold()
+
 let g:ycm_autoclose_preview_window_after_completion=1
 
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
