@@ -147,7 +147,7 @@ let g:EasyGrepCommand = 1
 set grepprg=git\ grep\ -n
 
 let python_highlight_all = 1
-let g:ycm_python_binary_path = '/Users/turbokuzmich/.virtualenvs/statbox/bin/python'
+let g:ycm_python_binary_path = '/usr/local/bin/python3'
 
 nmap ,n :NERDTreeFind<CR>
 nmap ,m :NERDTreeToggle<CR>
@@ -177,6 +177,8 @@ endfunction
 
 au FileType stylus call StylusFold()
 
+let g:pymode_virtualenv = 1
+let g:pymode_options_max_line_length = 120
 let g:ycm_autoclose_preview_window_after_completion=1
 
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
@@ -187,7 +189,8 @@ let g:ale_fixers = {
 \    'typescript': ['prettier'],
 \    'json': ['prettier'],
 \    'html': ['prettier'],
-\    'css': ['prettier']
+\    'css': ['prettier'],
+\    'python': ['yapf']
 \}
 nmap <leader>f :ALEFix<CR>
 
