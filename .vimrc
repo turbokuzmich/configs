@@ -42,10 +42,9 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'elzr/vim-json'
 Plugin 'moll/vim-node'
+Plugin 'MaxMEllon/vim-jsx-pretty'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'mattn/emmet-vim'
-Plugin 'ternjs/tern_for_vim'
-Plugin 'neoclide/vim-jsx-improve'
 
 Plugin 'raichoo/purescript-vim'
 
