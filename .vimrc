@@ -51,6 +51,7 @@ Plugin 'raichoo/purescript-vim'
 Plugin 'StanAngeloff/php.vim'
 
 Plugin 'leafgarland/typescript-vim'
+Plugin 'peitalin/vim-jsx-typescript'
 Plugin 'Quramy/vim-js-pretty-template'
 Plugin 'Quramy/tsuquyomi'
 
@@ -181,11 +182,16 @@ let g:pymode_options_max_line_length = 120
 let g:ycm_autoclose_preview_window_after_completion=1
 
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+map <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
+map <leader>gt :YcmCompleter GetType<CR>
+map <leader>gtt :YcmCompleter GoToType<CR>
+map <leader>gtr :YcmCompleter GoToReferences<CR>
 filetype plugin indent on
 
 let g:ale_fixers = {
 \    'javascript': ['prettier'],
 \    'typescript': ['prettier'],
+\    'typescriptreact': ['prettier'],
 \    'json': ['prettier'],
 \    'html': ['prettier'],
 \    'css': ['prettier'],
